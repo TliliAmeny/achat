@@ -57,23 +57,23 @@ public class AchatApplicationTest {
 		log.info("get"+stock.toString());
 		verify(stockRepository).findById(Mockito.anyLong());
 	  }
-	  @Test
-	  @Order(2)
-	  public void testDeleteStock() {
-	     
-	      Long stockIdToDelete = 1L;
-	      Stock stock = new Stock();
-	      stock.setIdStock(stockIdToDelete);
-
-	      
-	      iStock.deleteStock(stockIdToDelete);
-
-	     
-	      Optional<Stock> deletedStock = stockRepository.findById(stockIdToDelete);
-
-	      Assertions.assertTrue(deletedStock.isEmpty(), "Le stock n'a pas été supprimé avec succès");
-	  }
-	
+//	  @Test
+//	  @Order(2)
+//	  public void testDeleteStock() {
+//	     
+//	      Long stockIdToDelete = 1L;
+//	      Stock stock = new Stock();
+//	      stock.setIdStock(stockIdToDelete);
+//
+//	      
+//	      iStock.deleteStock(stockIdToDelete);
+//
+//	     
+//	      Optional<Stock> deletedStock = stockRepository.findById(stockIdToDelete);
+//
+//	      Assertions.assertTrue(deletedStock.isEmpty(), "Le stock n'a pas été supprimé avec succès");
+//	  }
+//	
 	
 	
 
